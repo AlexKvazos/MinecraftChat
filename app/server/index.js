@@ -37,15 +37,14 @@ if (process.env.REDIS_HOST && process.env.REDIS_PORT) {
 require('./sockets')(io);
 
 
-// send homepage
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/templates/index.html'));
-});
-
-
-
 // public folder serves static content
 app.use('/', express.static(path.join(__dirname, '../../public')));
+
+
+// send homepage
+app.use('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../public/templates/index.html'));
+});
 
 
 // set port
