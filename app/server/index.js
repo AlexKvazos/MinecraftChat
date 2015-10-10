@@ -22,6 +22,7 @@ let app     = express();
 let server  = createServer(app);
 let io      = socketio(server);
 
+io.set('origins', '*');
 
 // setup socket.io-redis if connection variables are set
 if (process.env.REDIS_HOST && process.env.REDIS_PORT) {
