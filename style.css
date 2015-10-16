@@ -1,18 +1,12 @@
 body, html {
   font-family: 'Lato';
-  padding: 30px;
+  padding: 10px 0 0 0;
   margin: 0;
-  background: #eeeeee; /* Old browsers */
-  background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+  background: url(img/heads.jpg);
   height: 100%;
   width: 100%;
   overflow: hidden;
+  -webkit-animation: bgscroll 25s infinite linear;
 }
 
 *,*:before,*:after {
@@ -121,14 +115,14 @@ img.app {
 }
 
 h1 {
-  color: #000;
+  color: #FFF;
   font-weight: 200;
   margin: 30px 0;
 }
 
 p {
   font-weight: 200;
-  color: #525252;
+  color: #9f9f9f;
   margin: 30px 0;
 }
 
@@ -146,5 +140,26 @@ p {
 span.or {
   padding-left: 20px;
   font-weight: bold;
-  color: #777;
+  color: #c2c2c2;
+}
+
+/* == banner == */
+@-webkit-keyframes bgscroll {
+    from {background-position:0 0;}
+    to {background-position:0 -422px;}
+}
+
+@-moz-keyframes bgscroll {
+    from {background-position:0 0;}
+    to {background-position:0 -422px;}
+}
+
+@-o-keyframes bgscroll {
+    from {background-position:0 0;}
+    to {background-position:0 -422px;}
+}
+
+@keyframes bgscroll {
+    from {background-position:0 0;}
+    to {background-position:0 -422px;}
 }
