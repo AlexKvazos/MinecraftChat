@@ -47,6 +47,7 @@ export default (socket) => {
 
     // send line back to the client
     socket.emit('bot:message', buffer);
+    console.log(buffer);
 
   };
 
