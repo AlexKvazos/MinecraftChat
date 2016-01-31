@@ -9,7 +9,7 @@ export default (socket) => {
     let timestamp = moment().format('MMM D h:mm:ss a');
 
     // log activity to console
-    console.log(`${timestamp}: connecting > ${data.hostname}:${data.port} - ${data.username}`);
+    console.log(`${timestamp}: ${data.hostname}:${data.port} - ${data.username} [connecting]`);
 
 
     // inform user that connection is being made
