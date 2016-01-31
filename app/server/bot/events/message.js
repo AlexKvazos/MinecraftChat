@@ -32,6 +32,8 @@ export default (socket) => {
     // if none of the parsers returned anything, stop here
     if (!buffer) return;
 
+    console.log(buffer);
+
     // escape any html in the buffer
     buffer = escapeHtml(buffer);
 
@@ -47,7 +49,6 @@ export default (socket) => {
 
     // send line back to the client
     socket.emit('bot:message', buffer);
-    console.log(buffer);
 
   };
 
