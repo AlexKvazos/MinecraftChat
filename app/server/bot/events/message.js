@@ -32,8 +32,6 @@ export default (socket) => {
     // if none of the parsers returned anything, stop here
     if (!buffer) return;
 
-    console.log(buffer);
-
     // escape any html in the buffer
     buffer = escapeHtml(buffer);
 
